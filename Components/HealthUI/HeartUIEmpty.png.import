@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GrassEffect.png-1d93e979c27cd3d289d0be334a635484.stex"
+path="res://.import/HeartUIEmpty.png-8e7c9441e28242d8c40c0748c9012dea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Components/Grass/GrassEffect.png"
-dest_files=[ "res://.import/GrassEffect.png-1d93e979c27cd3d289d0be334a635484.stex" ]
+source_file="res://Components/HealthUI/HeartUIEmpty.png"
+dest_files=[ "res://.import/HeartUIEmpty.png-8e7c9441e28242d8c40c0748c9012dea.stex" ]
 
 [params]
 

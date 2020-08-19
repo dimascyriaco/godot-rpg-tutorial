@@ -1,6 +1,6 @@
 extends Node2D
 
-var GrassEffect = preload("res://Components/Grass/GrassEffect.tscn")
+var GrassEffect = preload("res://Components/Grass/GrassDeathAnimation.tscn")
 
 func _on_Hurtbox_area_entered(_area):
 	var grass_effect = GrassEffect.instance()
