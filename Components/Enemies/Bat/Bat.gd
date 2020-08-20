@@ -20,6 +20,7 @@ onready var stats = $Stats
 onready var player_detection_zone = $PlayerDetectionZone
 onready var sprite = $AnimatedSprite
 onready var hurtbox = $Hurtbox
+onready var soft_collision = $SoftCollision
 
 var DeathAnimation = preload('res://Components/Enemies/Bat/BatDeathAnimation.tscn')
 
@@ -35,6 +36,9 @@ func _physics_process(delta) -> void:
 		State.CHASE:
 			handle_chase(delta)
 			handle_animation()
+
+	if soft_collision.is_colliding():
+		current_velocity += soft_collision.get_push_vector() * delta * 400
 
 	current_velocity = move_and_slide(current_velocity)
 

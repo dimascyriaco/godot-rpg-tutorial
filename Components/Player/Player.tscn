@@ -1,10 +1,11 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Components/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Components/Player/Player.png" type="Texture" id=2]
 [ext_resource path="res://Components/Hitbox/Hitbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Components/Player/SwordHitbox.gd" type="Script" id=4]
 [ext_resource path="res://Components/Hurtbox/Hurtbox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Shadows/MediumShadow.png" type="Texture" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0
@@ -614,6 +615,10 @@ script = ExtResource( 1 )
 max_velocity = 100
 time_to_full_stop = 0.2
 roll_speed_modifier = 1.2
+
+[node name="ShadowSprite" type="Sprite" parent="."]
+position = Vector2( -0.25, 2.625 )
+texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -9 )
