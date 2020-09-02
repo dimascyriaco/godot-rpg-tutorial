@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+const PlayerHurtSound = preload('res://Components/Player/PlayerHurtSound.tscn')
+
 export var max_velocity: int = 150 # pixels per second
 export var time_to_full_speed: float = .3 # seconds
 export var time_to_full_stop: float = .3 # seconds
@@ -21,6 +23,7 @@ onready var animation_tree = $AnimationTree
 onready var animation_state = animation_tree.get('parameters/playback')
 onready var sword_hitbox = $HitboxPivot/SwordHitbox
 onready var hurtbox = $Hurtbox
+onready var blink_animation_player = $BlinkAnimationPlayer
 
 func _ready():
 	animation_tree.active = true
@@ -117,6 +120,14 @@ func _on_Hurtbox_area_entered(_area):
 	hurtbox.start_invincibility(0.5)
 	hurtbox.create_hit_effect()
 
+	var player_hurt_sound = PlayerHurtSound.instance()
+	get_tree().current_scene.add_child(player_hurt_sound)
 
 func _on_Hurtbox_area_exited(_area):
 	pass
+
+func _on_Hurtbox_invincibility_started():
+	blink_animation_player.play("Start")
+
+func _on_Hurtbox_invincibility_ended():
+	blink_animation_player.play("Stop")

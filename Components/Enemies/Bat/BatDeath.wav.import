@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/EnemyDie.wav-1b72ef3264582da065f46b3940f0e3ab.sample"
+path="res://.import/BatDeath.wav-5247b0b8eaf79204e121f5b7bb4c9182.sample"
 
 [deps]
 
-source_file="res://Assets/Music and Sounds/EnemyDie.wav"
-dest_files=[ "res://.import/EnemyDie.wav-1b72ef3264582da065f46b3940f0e3ab.sample" ]
+source_file="res://Components/Enemies/Bat/BatDeath.wav"
+dest_files=[ "res://.import/BatDeath.wav-5247b0b8eaf79204e121f5b7bb4c9182.sample" ]
 
 [params]
 
